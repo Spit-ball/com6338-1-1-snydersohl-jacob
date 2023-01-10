@@ -9,7 +9,7 @@ function greet() { // declare function
     if(confirm("If you have already had your birthday this year, click OK. If not, click Cancel.")) { // if else statement that allows for options on OK or cancel.
         alert(new Date().getFullYear() - userAge) // alert with the subtraction of year/age
         } else {
-            userAge += 1// I am unsure why I had to parseInt again here, and for a number that wasn't in quotation marks, but it worked.
+            userAge += 1 //increment userAge + 1 in case of negation
             alert(new Date().getFullYear() - userAge)
         }
     }
