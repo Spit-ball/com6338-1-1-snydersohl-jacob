@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, JavaScript</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      :root {
+        --primary-color: hsl(270, 54%, 15%);
+        --text: #eee;
+        --button-bg: rebeccapurple;
+        --button-border: hsl(270, 54%, 50%);
+      }
+      body {
+        max-width: 800px;
+        margin: auto;
+        background-color: var(--primary-color);
+        color: var(--text);
+        font-size: 1.2rem;
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1, h2 {
+        text-align: center;
+        margin: 48px 0;
+        letter-spacing: 1.5px;
+      }
+      button, p {
+        margin: 48px 0;
+      }
+      button {
+        padding: 12px 24px;
+        background-color: rebeccapurple;
+        border: solid 2px var(--button-border);
+        border-radius: 4px;
+        color: var(--text);
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 200ms;
+        margin: auto;
+        display: block;
+      }
+      button:hover {
+        background-color: var(--button-border);
+      }
+      span.mono {
+        font-family: 'Courier New', Courier, monospace;
+      }
+      a {
+        color: hsl(15, 72%, 75%);
+      }
+      a:visited {
+        color: hsl(15, 72%, 70%);
+      }
+      ul > li, ol > li {
+        line-height: 2;
+      }
+      a.code-link {
+        text-decoration: none;
+        position: relative
+      }
+      a.code-link:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        border-bottom: hsl(15, 72%, 75%) 2px solid;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+</head>
+
+<body>
+  <h1>Hello JavaScript!</h1>
+  <button onclick="greet()" id="greet-btn">Greetings!</button>
+  <h2 id="instructions">Instructions</h2>
+  <p>In this assignment, you will create a simple function using JavaScript that will make some small talk with the user using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"><span class="mono">alert</span></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm"><span class="mono">confirm</span></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"><span class="mono">prompt</span></a> when the user clicks the "Greetings!" button above.</p>
+  <p>First, create a function named <span class="mono">greet</span>.</p>
+  <pre><code class="language-js">function greet() {}</code></pre>
+  <p>The button at the top of this page is already coded to run the <span class="mono">greet</span> function when clicked, so there is <u>no need to modify the HTML</u>. Here is the included code for the aforementioned button:</p>
+  <pre><code class="language-markup">&lt;button onclick="greet()">Greetings!&lt;/button></code></pre>
+  <p>After creating the <span class="mono">greet</span> function, inside the function, do the following:</p>
+  <ol>
+    <li>Use a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"><span class="mono">prompt</span></a> to ask the user for her name.
+      <ul>
+        <li>The user should be prompted with the text "What is your name?"</li>
+      </ul>
+    </li>
+    <li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"><span class="mono">alert</span></a> to greet the user with her name.
+      <ul>
+        <li>E.g. if the user entered "Sally", the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"><span class="mono">alert</span></a> should display "Hello, Sally"</li>
+      </ul>
+    </li>
+    <li>Use another <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"><span class="mono">prompt</span></a> call to ask the user their age.
+      <ul>
+        <li>The user should be shown the text "How old are you?"</li>
+        <li>Use the <a href="https://www.freecodecamp.org/news/parseint-in-javascript-js-string-to-int-example/"><span class="mono">parseInt</span></a> method to convert the user's answer into a <span class="mono">number</span>.</li>
+      </ul>
+    </li>
+    <li>Use a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm"><span class="mono">confirm</span></a> to ask the user if she has had a birthday yet this year.</li>
+    <li>Use an alert to tell the user what year she was born in.
+      <ul>
+        <li>If the user has had a birthday this year, subtract their age from the current year.</li>
+        <li>If the user has not yet had a birthday this year, subtract their age plus one from the current year.</li>
+        <li>Use <a class="code-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear"><code class="language-js">new Date().getFullYear()</code></a> to get the current year.</li>
+      </ul>
+    </li>
+  </ol>
+  <h2>Testing</h2>
+  <p>This assignment includes pre-written automated tests that check the functionality of the <span class="mono">greet</span> function.</p>
+  <p>To run the automated tests, click the "Run Tests" button in the bottom right of the screen.</p>
+  <p>To close the test suite, click "Close Tests" in the bottom right of the screen.</p>
+  <p>In order to receive full-credit for this assignment, all of the automated tests must pass.</p>
+  <h2>Requirements for full credit</h2>
+  <p>To receive full credit for this assignment, your program MUST:
+    <ul>
+      <li>Be implemented according to the above <a href="#instructions">instructions</a>.</li>
+      <li>Pass all automated tests</li>
+      <li>Be deployed to GitHub Pages.</li>
+    </ul>
+  </p>
+  <h2>Submission</h2>
+  <p>
+    When submitting this assignment, please include <u>BOTH</u>:
+    <ol>
+      <li>A link to the assignment's GitHub repository.</li>
+      <li>A link to the assignment's deployed, live site on GitHub Pages.</li>
+    </ol>
+  </p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"
+    integrity="sha512-/Swpp6aCQ0smuZ+zpklJqMClcUlvxhpLf9aAcM7JjJrj2waCU4dikm3biOtMVAflOOeniW9qzaNXNrbOAOWFCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="index.js"></script>
+  <script src="tests.js"></script>
+</body>
+
+</html>
