@@ -7,10 +7,11 @@ function greet() { // declare function
     var userAge = prompt("How old are you, " + name_input + "?") // create the age input variable and store the response to prompt
     userAge = parseInt(userAge) // convert age from String to integer
     if(confirm("If you have already had your birthday this year, click OK. If not, click Cancel.")) { // if else statement that allows for options on OK or cancel.
-        alert(new Date().getFullYear() - userAge) // alert with the subtraction of year/age
+        alert((new Date().getFullYear() - userAge).toString()) // alert with the subtraction of year/age
         } else {
-            userAge += 1 //increment userAge + 1 in case of negation
-            alert(new Date().getFullYear() - userAge)
+            userAge += 1
+            console.log(userAge)
+            alert((new Date().getFullYear() - userAge).toString()) 
         }
     }
 
